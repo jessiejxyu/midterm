@@ -36,6 +36,24 @@ nav a {
     text-decoration: none;
     font-size: 14px;
     margin: 5px 10px;
+    opacity: 0; /* Start hidden */
+    animation: showUp 1s ease-in forwards; /* Apply the animation */
+}
+
+nav a:nth-child(1) {
+    animation-delay: 0.2s; /* Delay for staggered effect */
+}
+nav a:nth-child(2) {
+    animation-delay: 0.4s;
+}
+nav a:nth-child(3) {
+    animation-delay: 0.6s;
+}
+nav a:nth-child(4) {
+    animation-delay: 0.8s;
+}
+nav a:nth-child(5) {
+    animation-delay: 1s;
 }
 
 .content {
@@ -46,6 +64,7 @@ nav a {
     background-color: black;
     padding: 20px;
 }
+
 .content div {
     display: flex;
     justify-content: center; /* Centers the images inside the container */
@@ -70,7 +89,6 @@ nav a {
     border-color: #e0e0e0;
 }
 
-
 footer {
     background-color: #e0e0e0;
     padding: 10px;
@@ -86,6 +104,36 @@ footer a {
     text-decoration: none;
     margin: 5px 10px;
     font-size: 14px;
+    opacity: 0; /* Start hidden */
+    animation: showUp 1s ease-in forwards; /* Apply the animation */
+}
+
+footer a:nth-child(1) {
+    animation-delay: 0.2s; /* Delay for staggered effect */
+}
+footer a:nth-child(2) {
+    animation-delay: 0.4s;
+}
+footer a:nth-child(3) {
+    animation-delay: 0.6s;
+}
+footer a:nth-child(4) {
+    animation-delay: 0.8s;
+}
+footer a:nth-child(5) {
+    animation-delay: 1s;
+}
+
+/* Show-up animation using @keyframes */
+@keyframes showUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Move slightly downward */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Move back to original position */
+    }
 }
 
 /* Media Queries */
